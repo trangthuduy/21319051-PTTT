@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vietnamese Pho</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <a href="index.html" id="logo"><img src="images/logo.jpg.jpg" alt="logo"></a>
+            <ul class="navigation">
+                <li id="link1" class="selected"><a href="index.html">Home</a></li>
+                <li id="link2" class="selected"><a href="about.html">Our Cuisine</a></li>
+                <li id="link3" class="selected"><a href="address.html">Restaurant in Tokyo</a></li>
+            </ul>
+        </div>
+        <div class="body">
+            
+            <div>
+                <div>
+                    <h3>Welcome To Vietnamese Pho!</h3>
+                    <p>Vietnamese Pho is a culinary masterpiece, renowned for its aromatic, deeply flavorful broth and harmonious blend of tender meat, fresh herbs, and delicate rice noodles, capturing the essence of Vietnam in every comforting bowl.</p>
+                </div>
+                <div class="user-input-section">
+                    <h4>Interactive Section</h4>
+                    <label for="userInput">Enter your favorite "chicken" or "beef":</label>
+                    <input type="text" id="userInput">
+                    <button onclick="displayFlavor()">Submit</button>
+                    <p id="flavorOutput"></p>
+                </div>
+                <div>
+            
+                    <p>We bring you the best</p>
+                </div>
+            </div>
+            <div class="content-images">
+                <h4>Phở Gà (Chicken Pho)</h4>
+                <img src="images/phoga.jpg.jpg" alt="Chicken Pho">
+				<h4>Phở Bò (Beef Pho)</h4>
+                <img src="images/phoboo.jpg.jpg" alt="Beef Pho">
+                
+            </div>
+        </div>
+        <div class="footer">
+            <div class="social">
+                <span>Connect with Us:</span>
+                <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a>
+       
+                <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a>
+            </div>
+            <form action="about.html">
+                <label for="join">Subscribe to Our News:</label>
+                <input type="text" id="subscribe">
+                
+            </form>
+            <p>ID: 21319051 Pham Thi Thu Trang; 2024. All Rights Reserved.</p>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function displayFlavor() {
+            var userInput = document.getElementById('userInput').value.trim().toLowerCase();
+            var flavorOutput = document.getElementById('flavorOutput');
+            if (userInput === 'chicken') {
+                flavorOutput.innerText = 'The broth for Chicken Pho is typically made by simmering chicken bones, onions, ginger, and spices (such as star anise, cinnamon, cloves, and cardamom) for several hours. This slow cooking process extracts the flavors from the bones and spices, resulting in a clear and aromatic broth.';
+            } else if (userInput === 'beef') {
+                flavorOutput.innerText = 'The heart of Beef Pho is its flavorful broth, which is typically made by simmering beef bones, onions, ginger, and spices (such as star anise, cinnamon, cloves, and cardamom) for several hours. This slow cooking process extracts the rich umami flavors from the bones and spices, resulting in a clear yet complex broth.';
+            } else {
+                flavorOutput.innerText = 'Please enter either "chicken" or "beef".';
+            }
+        }
+    </script>
+</body>
+</html>
